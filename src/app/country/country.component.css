@@ -1,0 +1,59 @@
+input
+{
+ font-size: 1.2em;
+ padding: 0em;
+ width: 60%;
+ height: 3em;
+ align-self:center;
+ border-radius: 60px;
+
+position: relative;
+  }
+  body {
+    background-color:purple;
+
+      background-repeat: repeat;
+      background-color:  #00004d;
+      background-size: cover;
+    }
+
+button
+{
+ background-color: teal;
+ color: #ffffff;
+ display:inline-grid;
+ border-radius: 60px;
+
+
+ font-size: 1em;
+ height: 1em;
+ padding: 2em;
+ cursor : pointer;
+ text-align: center;
+ width: 20%;
+}
+.currentCountry{
+  padding-left:4px;
+  border-radius: 50px;
+  background-color:#00004d;
+
+}
+.searches {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr{
+  height: 50px;
+  width:100%;
+}
+h2{
+  color: white;
+}
+th, td {
+  font-size: 1em;
+  text-align: left;
+  padding: 4px;
+  color: white;
+}
+tr:nth-child(even) {background-color:rgba(117, 190, 218, 0.5);}
+tr:hover {background-color:teal;}

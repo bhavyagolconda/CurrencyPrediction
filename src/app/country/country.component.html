@@ -1,0 +1,67 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class='container-fluid' style="border-radius:'60px'">
+<input  type="text"  value=""  placeholder="Enter country name to know its currency value" onfocus="style.background = 'pink'" onblur="style.background ='white'" #countryname/>
+  <button type="button" name="button" (click)="this.getPrice(countryname.value); this.addName(countryname)">  Search
+    </button>
+
+</div>
+<div class="currentCountry">
+   <table>
+       <tr *ngIf="this.country  !== undefined">
+    <td> <div class="col-sm-1"  >   </div></td>
+  <td>   <div class="col-sm-1" >mon</div></td>
+  <td>   <div class="col-sm-1" >tue</div></td>
+     <td><div class="col-sm-1" >wed</div></td>
+  <td>   <div class="col-sm-1">thu</div></td>
+  <td>   <div class="col-sm-1">fri</div></td>
+  <td>   <div class="col-sm-1">sat</div></td>
+    <td> <div class="col-sm-1">sun</div><td>
+     </tr>
+     <tr>
+      <td>{{this.country.countryname}} currency in {{this.country.currency}} </td>
+      <td *ngFor="let v of this.country.values">{{v}}</td>
+     </tr>
+     </table>
+  </div>
+
+
+
+
+
+  <div  class="searches">
+    <table class="table" border="1">
+      <tbody>
+
+        <tr  *ngIf="this.country  !== undefined">
+        <td>  <h2> Past Searches </h2></td>
+        <td><div class="col-sm-1"  > Currency </div></td>
+<td><div class="col-sm-1"  > Time  </div></td>
+          <td><div class="col-sm-1"  >Mon</div></td>
+            <td><div class="col-sm-1"  >Tue</div></td>
+              <td><div class="col-sm-1"  >Wed</div></td>
+                <td><div class="col-sm-1"  >Thu</div></td>
+                  <td><div class="col-sm-1"  >Fri</div></td>
+                    <td><div class="col-sm-1"  >Sat</div></td>
+                    </tr>
+
+
+            <tr *ngFor="let pastcountry of this.pcountry">
+        <td  > <a href='/chart'> {{pastcountry.countryname}} </a>
+          <td>{{pastcountry.currency}}</td>
+
+                  <td>{{pastcountry.searchTime}}</td>
+                          <td>{{pastcountry.values[0]}}</td>
+                          <td>{{pastcountry.values[1]}}</td>
+                          <td>{{pastcountry.values[2]}}</td>
+                          <td>{{pastcountry.values[3]}}</td>
+                          <td>{{pastcountry.values[4]}}</td>
+                          <td>{{pastcountry.values[5]}}</td>
+          </tr>
+        </tbody>
+
+          </table>
+          </div>
